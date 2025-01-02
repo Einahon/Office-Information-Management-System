@@ -18,10 +18,5 @@ A Spring Boot-based RESTful API for managing office information. This project pr
 - **Validation**: Jakarta Bean Validation
 - **Logging**: SLF4J
 - **Language**: Java
-
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/office-information-management.git
-   cd office-information-management
+  
+Contribution is welcome
