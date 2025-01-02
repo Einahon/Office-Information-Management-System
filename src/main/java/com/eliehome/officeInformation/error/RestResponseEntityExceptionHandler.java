@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 @ControllerAdvice
 @ResponseStatus
 
-public class RestResponseEntityExceptionHandler  {
+public class RestResponseEntityExceptionHandler {
     @ExceptionHandler(OfficeNotFoundException.class)
     public ResponseEntity<ErrorMessage> officeNotFoundException(OfficeNotFoundException exception,
                                                                   WebRequest request){
@@ -26,6 +25,4 @@ public class RestResponseEntityExceptionHandler  {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorMessage(HttpStatus.BAD_REQUEST,
                 exception.getBindingResult().getFieldError().getDefaultMessage()));
     }
-
-
 }

@@ -63,5 +63,4 @@ public class Office {
     @Length(max = 50, min = 2, message = "Manager Name must be at least of 2 - 50 characters ")
     private String manager;
 
-
 }
