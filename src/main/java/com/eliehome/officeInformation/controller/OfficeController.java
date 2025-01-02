@@ -43,7 +43,7 @@ public class OfficeController {
         return "Office deleted sucessfully!!!";
     }
     @PutMapping("/offices/{id}")
-    public Office updateOffice(@RequestBody Office office, @PathVariable("id") Long office_id) throws OfficeNotFoundException {
+    public Office updateOffice(@Valid @RequestBody Office office, @PathVariable("id") Long office_id) throws OfficeNotFoundException {
         return officeService.updateOffice(office, office_id);
 
     }
